@@ -9,19 +9,25 @@ const Shop = () => {
         fetch("fakeDB.json")
             .then(response => response.json())
             .then(data => setCars(data))
-    }, [])
-    // console.log(Cars);
+    }, []);
+
+    
+
+    const handleAddToCart = (product) => {
+        console.log("Product Added",product);
+    }
+
     return (
         <div className='row'>
             <div className='col-md-9 mt-4'>
                 <div className='row'>
                     {
-                        Cars.map(carDetails => <Product car={carDetails} key={carDetails.id} />)
+                        Cars.map(carDetails => <Product car={carDetails} key={carDetails.id} handleAddToCart={handleAddToCart} />)
                     }
                 </div>
             </div>
             <div className='col-md-3 mt-5'>
-                <Cart/>
+                <Cart />
             </div>
         </div>
     );

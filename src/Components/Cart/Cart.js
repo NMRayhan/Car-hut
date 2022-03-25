@@ -18,7 +18,7 @@ const Cart = () => {
             </div>
             <div className='card-footer text-center row'>
                 <button className='btn btn-success col-12'>Random for Me <FontAwesomeIcon icon={faRandom} /></button>
-                <button className='btn btn-danger col-12 mt-2'>Try again <FontAwesomeIcon icon={faTrashAlt} /></button>
+                <button className='btn btn-danger col-12 mt-2'>Choice Again <FontAwesomeIcon icon={faTrashAlt} /></button>
             </div>
         </div>
     );
