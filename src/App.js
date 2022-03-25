@@ -3,8 +3,8 @@ import Shop from './Components/Shop/Shop';
 
 function App() {
   return (
-    <div className='container'>
-      <Shop/>
+    <div style={{ margin: "auto", width: "90%" }}>
+      <Shop />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
+import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 
 const Shop = () => {
@@ -12,7 +13,7 @@ const Shop = () => {
     // console.log(Cars);
     return (
         <div className='row'>
-            <div className='col-md-9 mt-5'>
+            <div className='col-md-9 mt-4'>
                 <div className='row'>
                     {
                         Cars.map(carDetails => <Product car={carDetails} key={carDetails.id} />)
@@ -20,9 +21,8 @@ const Shop = () => {
                 </div>
             </div>
             <div className='col-md-3 mt-5'>
-                <h2>Cart Details</h2>
+                <Cart/>
             </div>
-
         </div>
     );
 };
