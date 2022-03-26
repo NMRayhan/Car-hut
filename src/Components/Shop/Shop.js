@@ -20,18 +20,20 @@ const Shop = () => {
     const handleAddToCart = (product) => {
         if (Carts.length < 4) {
             setCarts([...Carts, product]);
-        }else{
-            alert("You Cannot add maximum 4 car at a time")
+        } else {
+            alert('You cannot add more then 4 product at a time')
         }
     }
 
-
-    const handleChoiceAgain = (AddAgain) =>{
-            if (Carts.lengt >= 1) {
-                setCarts(null);
-            
-        }
+    const handleChoiceAgain = () => {
+        setCarts([]);
     }
+
+    const handRandomProduct = () =>{
+        const randomChoice = Carts[Math.floor(Math.random()*Carts.length)];
+        setCarts([randomChoice]);
+    }
+
     return (
         <div className='row shop'>
             <div className='col-md-9 mt-2'>
@@ -42,7 +44,7 @@ const Shop = () => {
                 </div>
             </div>
             <div className='col-md-3 mt-5'>
-                <Cart cartData={Carts} key={Carts.id} handleChoiceAgain={handleChoiceAgain}/>
+                <Cart cartData={Carts} key={Carts.id} handleChoiceAgain={handleChoiceAgain} handRandomProduct={handRandomProduct} />
             </div>
         </div>
     );

@@ -4,7 +4,7 @@ import { faTrashAlt, faRandom, faTrashArrowUp } from '@fortawesome/free-solid-sv
 import React from 'react';
 import "./Cart.css";
 
-const Cart = ({ cartData, handleChoiceAgain }) => {
+const Cart = ({ cartData, handleChoiceAgain,handRandomProduct }) => {
     return (
         <div className='card overflow-hidden cart'>
             <div className='card-header'>
@@ -24,14 +24,13 @@ const Cart = ({ cartData, handleChoiceAgain }) => {
                                 <div className='col-2'>
                                     <a href='#'><FontAwesomeIcon icon={faTrashArrowUp} className="text-secondary  rounded-circle" /> </a>
                                 </div>
-                                <hr />
                             </div>
                         </div>
                     })
                 }
             </div>
             <div className='card-footer text-center row'>
-                <button className='btn btn-success col-12'>Random for Me <FontAwesomeIcon icon={faRandom} /></button>
+                <button onClick={() => handRandomProduct()} className='btn btn-success col-12'>Random for Me <FontAwesomeIcon icon={faRandom} /></button>
                 <button onClick={() => handleChoiceAgain()} className='btn btn-danger col-12 mt-2'>Choice Again <FontAwesomeIcon icon={faTrashAlt} /></button>
             </div>
         </div>
