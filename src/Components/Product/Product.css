@@ -3,5 +3,9 @@
 }
 
 .cart-icon{
-    color: black;
+    color: tomato;
+}
+
+.custome-btn{
+    background-color: rgb(116, 80, 74);
 }

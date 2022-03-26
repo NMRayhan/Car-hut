@@ -18,7 +18,7 @@ const Product = ({ car, handleAddToCart }) => {
                             <h6>Price : ${Price}M</h6>
                         </div>
                         <div className='col-md-6 col-sm-12'>
-                            <button onClick={() => handleAddToCart(car)} className='btn btn-secondary'>Add <FontAwesomeIcon icon={faShoppingCart} className="cart-icon" /></button>
+                            <button onClick={() => handleAddToCart(car)} className='btn custome-btn' style={{color:"tomato"}}>Add <FontAwesomeIcon icon={faShoppingCart} className="cart-icon" /></button>
                         </div>
                     </div>
                 </div>
