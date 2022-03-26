@@ -4,9 +4,11 @@ import Shop from './Components/Shop/Shop';
 
 function App() {
   return (
-    <div style={{ margin: "auto", width: "90%" }}>
-      <Header/>
-      <Shop />
+    <div>
+      <Header />
+      <div style={{ margin: "auto", width: "95%" }}>
+        <Shop />
+      </div>
     </div>
   );
 }

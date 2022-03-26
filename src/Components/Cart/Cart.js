@@ -4,9 +4,7 @@ import { faTrashAlt, faRandom, faTrashArrowUp } from '@fortawesome/free-solid-sv
 import React from 'react';
 import "./Cart.css";
 
-const Cart = ({ cartData }) => {
-    // const {name, Image} = props.;
-    console.log(cartData);
+const Cart = ({ cartData, handleChoiceAgain }) => {
     return (
         <div className='card overflow-hidden cart'>
             <div className='card-header'>
@@ -21,12 +19,12 @@ const Cart = ({ cartData }) => {
                                     <img src={car.Image} className="w-100 rounded-circle" alt={car.name} />
                                 </div>
                                 <div className='col-7'>
-                                    <p>{car.name}</p>
+                                    <p className='text-center text-capitalize'>{car.name}</p>
                                 </div>
                                 <div className='col-2'>
-                                    <a href='#'><FontAwesomeIcon icon={faTrashArrowUp} /> </a>
+                                    <a href='#'><FontAwesomeIcon icon={faTrashArrowUp} className="text-secondary  rounded-circle" /> </a>
                                 </div>
-                                <hr/>
+                                <hr />
                             </div>
                         </div>
                     })
@@ -34,7 +32,7 @@ const Cart = ({ cartData }) => {
             </div>
             <div className='card-footer text-center row'>
                 <button className='btn btn-success col-12'>Random for Me <FontAwesomeIcon icon={faRandom} /></button>
-                <button className='btn btn-danger col-12 mt-2'>Choice Again <FontAwesomeIcon icon={faTrashAlt} /></button>
+                <button onClick={() => handleChoiceAgain()} className='btn btn-danger col-12 mt-2'>Choice Again <FontAwesomeIcon icon={faTrashAlt} /></button>
             </div>
         </div>
     );
